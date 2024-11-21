@@ -306,6 +306,28 @@
                 <input type="text" id="theme">
             </p>
 
+            <script>
+                var theme = document.getElementById('theme');
+                theme.addEventListener('blur', changeTheme, false);
+
+                function changeTheme(){
+                    var themeValue = document.getElementById('theme').value;
+
+                    switch(themeValue){
+                        case "warm":
+                            document.body.style.backgroundColor= "yellow";
+                            break;
+                        case "cool":
+                            document.body.style.backgroundColor = "blue";
+                            break;
+                        case "hot":
+                            document.body.style.backgroundColor = "red";
+                            break;
+                        default:
+                            alert("Please enter a valid theme.");
+                    }
+                }
+            </script>
         </div>
 
 
